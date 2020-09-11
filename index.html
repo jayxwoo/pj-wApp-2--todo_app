@@ -19,12 +19,38 @@
     <link rel="stylesheet" href="./css/style.css" type="text/css">
 
     <!-- title -->
-    <title></title>
+    <title>Project Web App #2 Todo app</title>
 </head>
 
 <body>
+    <div class="app-container">
+        <main class="main">
+            <form action="" class="todo-form">
+                <fieldset>
+                    <legend>Todo List</legend>
+                    <!-- search todo -->
+                    <input type="text" class="search-todo" name="search" placeholder="search todo here.." aria-label="search todo">
+
+                    <!-- todo list -->
+                    <ul class="todo-group">
+                        <li class="todo-item">
+                            <p>tidy up and organise</p>
+                            <button class="delete-btn"><i class="far fa-trash-alt delete-icon"></i></button>
+                        </li>
+                    </ul>
+
+                    <!-- add todo -->
+                    <div class="add-todo-container">
+                        <input type="text" class="add-todo" name="add" placeholder="add todo here.." aria-label="add todo">
+                        <button class="add-btn">add</button>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </div>
 
     <!-- js links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
     <script type="module" src="./js/script.js"></script>
 </body>
 

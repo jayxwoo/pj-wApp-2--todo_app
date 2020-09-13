@@ -18,4 +18,8 @@
 [layout]
 ======================= */
 /* body */
-body { font-family: Helvetica; }
+body { font-family: Arial, Helvetica, sans-serif; }
+
+/* app-container & app-main */
+.app-container { background: url(../img/todo-app-bg.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; }
+.app-main { width: 80%; background-color: rgba(250, 250, 250, 0.7); border-radius: 30px; text-align: center; }

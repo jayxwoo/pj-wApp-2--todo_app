@@ -25,25 +25,31 @@
 <body>
     <div class="app-container">
         <main class="main">
-            <form action="" class="todo-form">
+            <!-- app title -->
+            <h1 class="app-title">Todo List</h1>
+
+            <!-- search todo form -->
+            <form action="" class="search-todo-form">
                 <fieldset>
-                    <legend>Todo List</legend>
-                    <!-- search todo -->
-                    <input type="text" class="search-todo" name="search" placeholder="search todo here.." aria-label="search todo">
+                    <legend class="search-todo-title a11y-hidden">Search todo</legend>
+                    <input type="text" class="search-todo-input" name="search" placeholder="search todo here..">
+                </fieldset>
+            </form>
 
-                    <!-- todo list -->
-                    <ul class="todo-group">
-                        <li class="todo-item">
-                            <p>tidy up and organise</p>
-                            <button class="delete-btn"><i class="far fa-trash-alt delete-icon"></i></button>
-                        </li>
-                    </ul>
+            <!-- todo list -->
+            <ul class="todo-group">
+                <li class="todo-item">
+                    <p>tidy up and organise</p>
+                    <button class="delete-btn"><i class="far fa-trash-alt delete-icon"></i></button>
+                </li>
+            </ul>
 
-                    <!-- add todo -->
-                    <div class="add-todo-container">
-                        <input type="text" class="add-todo" name="add" placeholder="add todo here.." aria-label="add todo">
-                        <button class="add-btn">add</button>
-                    </div>
+            <!-- add todo -->
+            <form action="" class="add-todo-form">
+                <fieldset>
+                    <legend class="add-todo-title a11y-hidden">Add todo</legend>
+                    <input type="text" class="add-todo-input" name="add" placeholder="add todo here..">
+                    <button class="add-btn">Add</button>
                 </fieldset>
             </form>
         </main>

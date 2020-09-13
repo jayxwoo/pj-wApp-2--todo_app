@@ -4,6 +4,7 @@ body { min-height: 100vh; scroll-behavior: smooth; text-rendering: optimizeSpeed
 *, *::before, *::after { box-sizing: inherit; margin: 0; padding: 0; }
 img { max-width: 100%; height: auto; display: block; }
 ul, ol { list-style: none; }
+fieldset { border: none; }
 
 /* stop all animations and transitions during resizing */
 .resize-animation-stopper * { animation: none !important; transition: none !important; }

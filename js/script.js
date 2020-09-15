@@ -4,6 +4,7 @@ import './default.js';
 // ========== script ==========
 // reference
 const addTodoForm = document.querySelector('.add-todo-form');
+const todoGroup = document.querySelector('.todo-group');
 
 // add-todo reader
 class AddTodoReader {
@@ -19,8 +20,18 @@ class AddTodoReader {
 
 // add-todo displayer
 class AddTodoDisplayer {
-    constructor(addTodoText) {
+    constructor(addTodoText, todoGroup) {
         this.addTodoText = addTodoText;
+        this.todoGroup = todoGroup;
+    }
+
+    display = function () {
+        this.todoGroup.innerHTML += `
+            <li class="todo-item">
+                <p>${this.addTodoText}</p>
+                <button class="delete-btn"><i class="far fa-trash-alt delete-icon"></i></button>
+            </li>
+        `;
     }
 }
 
@@ -36,7 +47,8 @@ const main = function () {
         addTodoForm.reset();
 
         // addTodoDisplayer
-        const addTodoDisplayer = new AddTodoDisplayer(addTodoText);
+        const addTodoDisplayer = new AddTodoDisplayer(addTodoText, todoGroup);
+        addTodoDisplayer.display();
     });
 };
 

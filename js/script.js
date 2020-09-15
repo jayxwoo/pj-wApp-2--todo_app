@@ -17,21 +17,26 @@ class AddTodoReader {
     }
 };
 
-// todo displayer
+// add-todo displayer
+class AddTodoDisplayer {
+    constructor(addTodoText) {
+        this.addTodoText = addTodoText;
+    }
+}
 
 // main
 const main = function () {
-    // instances
-    const addTodoReader = new AddTodoReader(addTodoForm);
-
     addTodoForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         // addTodoReader
+        const addTodoReader = new AddTodoReader(addTodoForm);
         const addTodoText = addTodoReader.read();
         console.log(addTodoText);
-
         addTodoForm.reset();
+
+        // addTodoDisplayer
+        const addTodoDisplayer = new AddTodoDisplayer(addTodoText);
     });
 };
 

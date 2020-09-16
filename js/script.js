@@ -35,9 +35,20 @@ class AddTodoDisplayer {
     }
 }
 
+// todo remover
+class TodoRemover {
+    constructor(todoTarget) {
+        this.todoTarget = todoTarget;
+    }
+
+    remove = function () {
+        this.todoTarget.remove();
+    }
+}
+
 // main
 const main = function () {
-    addTodoForm.addEventListener('submit', (e) => {
+    addTodoForm.addEventListener('submit', e => {
         e.preventDefault();
 
         // addTodoReader
@@ -49,6 +60,22 @@ const main = function () {
         // addTodoDisplayer
         const addTodoDisplayer = new AddTodoDisplayer(addTodoText, todoGroup);
         addTodoDisplayer.display();
+    });
+
+    todoGroup.addEventListener('click', e => {
+        if (e.target.tagName === 'path') {
+            const todoTarget = e.target.parentElement.parentElement.parentElement;
+            const todoRemover = new TodoRemover(todoTarget);
+            todoRemover.remove();
+        } else if (e.target.tagName === 'svg') {
+            const todoTarget = e.target.parentElement.parentElement;
+            const todoRemover = new TodoRemover(todoTarget);
+            todoRemover.remove();
+        } else if (e.target.tagName === 'BUTTON') {
+            const todoTarget = e.target.parentElement;
+            const todoRemover = new TodoRemover(todoTarget);
+            todoRemover.remove();
+        };
     });
 };
 

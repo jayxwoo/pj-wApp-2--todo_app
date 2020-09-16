@@ -5,6 +5,7 @@ import './default.js';
 // reference
 const addTodoForm = document.querySelector('.add-todo-form');
 const todoGroup = document.querySelector('.todo-group');
+const searchTodoInput = document.querySelector('.search-todo-input');
 
 // add-todo reader
 class AddTodoReader {
@@ -48,6 +49,7 @@ class TodoRemover {
 
 // main
 const main = function () {
+    // add todo
     addTodoForm.addEventListener('submit', e => {
         e.preventDefault();
 
@@ -62,7 +64,9 @@ const main = function () {
         addTodoDisplayer.display();
     });
 
+    // remove todo
     todoGroup.addEventListener('click', e => {
+        // todoRemover
         if (e.target.tagName === 'path') {
             const todoTarget = e.target.parentElement.parentElement.parentElement;
             const todoRemover = new TodoRemover(todoTarget);
@@ -76,6 +80,12 @@ const main = function () {
             const todoRemover = new TodoRemover(todoTarget);
             todoRemover.remove();
         };
+    });
+
+    // search todo
+    searchTodoInput.addEventListener('keyup', () => {
+        const searchInputText = searchTodoInput.value;
+        console.log(searchInputText);
     });
 };
 

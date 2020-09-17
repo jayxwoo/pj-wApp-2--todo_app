@@ -84,7 +84,7 @@ const main = function () {
 
     // search todo
     searchTodoInput.addEventListener('keyup', () => {
-        const searchInputText = searchTodoInput.value;
+        const searchInputText = searchTodoInput.value.trim().toLowerCase();
         console.log(searchInputText);
     });
 };

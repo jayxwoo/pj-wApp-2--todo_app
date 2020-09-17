@@ -47,6 +47,28 @@ class TodoRemover {
     }
 }
 
+// todo searcher
+class TodoSearcher {
+    constructor(searchInputText, todoItems) {
+        this.searchInputText = searchInputText;
+        this.todoItems = todoItems;
+    }
+
+    // search = function () {
+    //     this.todoItems.forEach((todoItem) => {
+    //         console.log(todoItem.innerText.trim().toLowerCase().includes(this.searchInputText));
+    //         console.log(this.searchInputText);
+    //     });
+    // }
+
+    search = function () {
+        const filteredNoMatch = this.todoItems.filter((todoItem) => {
+            return !todoItem.innerText.trim().toLowerCase().includes(this.searchInputText);
+        });
+        console.log(filteredNoMatch);
+    }
+}
+
 // main
 const main = function () {
     // add todo
@@ -56,7 +78,6 @@ const main = function () {
         // addTodoReader
         const addTodoReader = new AddTodoReader(addTodoForm);
         const addTodoText = addTodoReader.read();
-        console.log(addTodoText);
         addTodoForm.reset();
 
         // addTodoDisplayer
@@ -84,8 +105,12 @@ const main = function () {
 
     // search todo
     searchTodoInput.addEventListener('keyup', () => {
-        const searchInputText = searchTodoInput.value.trim().toLowerCase();
-        console.log(searchInputText);
+        const searchTodoText = searchTodoInput.value.trim().toLowerCase();
+        const todoItems = Array.from(todoGroup.children);
+        
+        // todoSearcher
+        const todoSearcher = new TodoSearcher(searchTodoText, todoItems);
+        todoSearcher.search();
     });
 };
 

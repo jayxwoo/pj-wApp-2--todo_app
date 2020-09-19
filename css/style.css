@@ -48,6 +48,7 @@ body { font-family: Arial, Helvetica, sans-serif; }
 .delete-btn { background: none; border: none; color: var(--white); font-size: 1.1rem; cursor: pointer; }
 .delete-btn:hover { color: var(--red); }
 .delete-btn:active { transform: translate(2px, 2px); }
+.filtered { display: none; }
 
 /* add todo */
 .add-todo-form {width: 90%; margin: 0 auto; }

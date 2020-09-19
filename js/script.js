@@ -54,18 +54,22 @@ class TodoSearcher {
         this.todoItems = todoItems;
     }
 
-    // search = function () {
-    //     this.todoItems.forEach((todoItem) => {
-    //         console.log(todoItem.innerText.trim().toLowerCase().includes(this.searchInputText));
-    //         console.log(this.searchInputText);
-    //     });
-    // }
-
-    search = function () {
+    searchNoMatch = function () {
         const filteredNoMatch = this.todoItems.filter((todoItem) => {
             return !todoItem.innerText.trim().toLowerCase().includes(this.searchInputText);
         });
-        console.log(filteredNoMatch);
+        filteredNoMatch.forEach((filteredNoMatchItem) => {
+            filteredNoMatchItem.classList.add('filtered');
+        })
+    }
+
+    searchMatch = function () {
+        const filteredMatch = this.todoItems.filter((todoItem) => {
+            return todoItem.innerText.trim().toLowerCase().includes(this.searchInputText);
+        });
+        filteredMatch.forEach((filteredMatchItem) => {
+            filteredMatchItem.classList.remove('filtered');
+        });
     }
 }
 
@@ -110,7 +114,8 @@ const main = function () {
         
         // todoSearcher
         const todoSearcher = new TodoSearcher(searchTodoText, todoItems);
-        todoSearcher.search();
+        todoSearcher.searchNoMatch();
+        todoSearcher.searchMatch();
     });
 };
 

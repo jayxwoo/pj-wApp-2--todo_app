@@ -6,6 +6,7 @@ import './default.js';
 const addTodoForm = document.querySelector('.add-todo-form');
 const todoGroup = document.querySelector('.todo-group');
 const searchTodoInput = document.querySelector('.search-todo-input');
+const darkSwitch = document.querySelector('.dark-switch');
 
 // add-todo reader
 class AddTodoReader {
@@ -116,6 +117,15 @@ const main = function () {
         const todoSearcher = new TodoSearcher(searchTodoText, todoItems);
         todoSearcher.searchNoMatch();
         todoSearcher.searchMatch();
+    });
+
+    // dark mode
+    darkSwitch.addEventListener('change', () => {
+        if (darkSwitch.checked) {
+            console.log('dark mode on');
+        } else if (!darkSwitch.checked) {
+            console.log('dark mode off');
+        };
     });
 };
 

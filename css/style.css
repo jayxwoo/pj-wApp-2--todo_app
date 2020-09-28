@@ -8,8 +8,8 @@
 [variables]
 ======================= */
 :root {
-    --white: rgba(250, 250, 250, 0.7);
-    --black: rgba(0, 0, 0, 0.7);
+    --main: rgba(250, 250, 250, 0.7);
+    --contrast: rgba(0, 0, 0, 0.7);
     --lightgrey: rgba(198, 198, 198, 0.7);
     --red: rgba(255, 71, 71, 0.7);
     --blue: rgba(0, 157, 255, 0.7);
@@ -29,18 +29,18 @@ body { font-family: Arial, Helvetica, sans-serif; }
 
 /* app-container & app-main */
 .app-container { background: url(../img/todo-app-bg.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; }
-.app-main { width: 80%; min-width: 300px; max-width: calc(1440*0.8px); background-color: var(--white); border-radius: 30px; text-align: center; padding: 2rem; position: relative; }
+.app-main { width: 80%; min-width: 300px; max-width: calc(1440*0.8px); background-color: var(--main); border-radius: 30px; text-align: center; padding: 2rem; position: relative; }
 
 /* dark mode switch */
 .dark-form { display: flex; position: absolute; top: 20px; right: 20px; }
-.dark-label { display: flex; align-items: center; color: var(--black); text-transform: uppercase; font-size: 12px; padding: 0 5px; font-weight: bold; }
-.dark-switch { width: 44px; height: 24px; appearance: none; background-color: var(--lightgrey); outline: none; border-radius: 40px; box-shadow: inset 0 0 5px var(--black); cursor: pointer; transition: all ease-in-out .5s; position: relative; }
+.dark-label { display: flex; align-items: center; color: var(--contrast); text-transform: uppercase; font-size: 12px; padding: 0 5px; font-weight: bold; }
+.dark-switch { width: 44px; height: 24px; appearance: none; background-color: var(--lightgrey); outline: none; border-radius: 40px; box-shadow: inset 0 0 5px var(--contrast); cursor: pointer; transition: all ease-in-out .5s; position: relative; }
 .dark-switch:checked { background-color: var(--blue); }
 .dark-switch::before { content: ''; position: absolute; top: 0; left: 0; width: 24px; height: 24px; background-color: white; border-radius: 50%; transition: all ease-in-out .5s; transform: scale(1.1); }
 .dark-switch:checked::before { left: 20px; }
 
 /* app title */
-.app-title { margin-bottom: 2rem; color: var(--black); }
+.app-title { margin-bottom: 2rem; color: var(--contrast); }
 @media only screen and (max-width: 600px) {
     .app-title { font-size: 1.5em; }
 }
@@ -51,10 +51,10 @@ body { font-family: Arial, Helvetica, sans-serif; }
 
 /* todo list */
 .todo-group { width: 90%; margin: 2rem auto; }
-.todo-item { background-color: var(--black); display: flex; padding: 0.5rem 0.7rem; border-radius: 5px; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
+.todo-item { background-color: var(--contrast); display: flex; padding: 0.5rem 0.7rem; border-radius: 5px; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
 .todo-item:last-of-type { margin-bottom: 0; }
-.todo-item p { color: var(--white); }
-.delete-btn { background: none; border: none; color: var(--white); font-size: 1.1rem; cursor: pointer; }
+.todo-item p { color: var(--main); }
+.delete-btn { background: none; border: none; color: var(--main); font-size: 1.1rem; cursor: pointer; }
 .delete-btn:hover { color: var(--red); }
 .delete-btn:active { transform: translate(2px, 2px); }
 .filtered { display: none; }
@@ -63,6 +63,6 @@ body { font-family: Arial, Helvetica, sans-serif; }
 .add-todo-form {width: 90%; margin: 0 auto; }
 .add-todo-group { display: flex; }
 .add-todo-input { flex-grow: 1; border: none; font-size: 1.1rem; padding: 0.5rem; border-radius: 5px; }
-.add-btn { border: none; margin-left: 5px; color: var(--white); background: var(--blue); padding: 0 0.5rem; border-radius: 5px; cursor: pointer; font-size: 0.9rem; }
-.add-btn:hover { color: var(--blue); background-color: var(--white); }
+.add-btn { border: none; margin-left: 5px; color: var(--main); background: var(--blue); padding: 0 0.5rem; border-radius: 5px; cursor: pointer; font-size: 0.9rem; }
+.add-btn:hover { color: var(--blue); background-color: var(--main); }
 .add-btn:active { transform: translate(2px, 2px); }

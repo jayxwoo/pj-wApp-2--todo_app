@@ -7,6 +7,7 @@ const addTodoForm = document.querySelector('.add-todo-form');
 const todoGroup = document.querySelector('.todo-group');
 const searchTodoInput = document.querySelector('.search-todo-input');
 const darkSwitch = document.querySelector('.dark-switch');
+const root = document.documentElement;
 
 // add-todo reader
 class AddTodoReader {
@@ -74,6 +75,23 @@ class TodoSearcher {
     }
 }
 
+// dark mode switch
+class DarkModeSwitch {
+    constructor(darkSwitch) {
+        this.darkSwitch = darkSwitch;
+    }
+
+    switch = function () {
+        if (this.darkSwitch.checked) {
+            root.style.setProperty('--main', 'rgba(0, 0, 0, 0.7)');
+            root.style.setProperty('--contrast', 'rgba(250, 250, 250, 0.7)');
+        } else if (!this.darkSwitch.checked) {
+            root.style.setProperty('--main', 'rgba(250, 250, 250, 0.7)');
+            root.style.setProperty('--contrast', 'rgba(0, 0, 0, 0.7)');
+        };
+    }
+}
+
 // main
 const main = function () {
     // add todo
@@ -121,11 +139,8 @@ const main = function () {
 
     // dark mode
     darkSwitch.addEventListener('change', () => {
-        if (darkSwitch.checked) {
-            console.log('dark mode on');
-        } else if (!darkSwitch.checked) {
-            console.log('dark mode off');
-        };
+        const darkModeSwitch = new DarkModeSwitch(darkSwitch);
+        darkModeSwitch.switch();
     });
 };
 

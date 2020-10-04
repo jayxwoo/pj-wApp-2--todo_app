@@ -28,8 +28,8 @@
 body { font-family: Arial, Helvetica, sans-serif; }
 
 /* app-container & app-main */
-.app-container { background: url(../img/todo-app-bg.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100vw; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 5%; }
-.app-main { width: 80%; min-width: 300px; max-width: calc(1440*0.8px); background-color: var(--main); border-radius: 30px; text-align: center; padding: 2rem; position: relative; }
+.app-container { background: url(../img/todo-app-bg.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 5%; overflow: scroll; }
+.app-main { width: 80%; min-width: 350px; max-width: calc(1440*0.8px); background-color: var(--main); border-radius: 30px; text-align: center; padding: 2rem; position: relative; }
 @media only screen and (max-width: 600px) {
     .app-main { padding: 1.5rem; }
 }
@@ -63,9 +63,9 @@ body { font-family: Arial, Helvetica, sans-serif; }
 .filtered { display: none; }
 
 /* add todo */
-.add-todo-form { width: 90%; margin: 0 auto; }
-.add-todo-group { width: 100%; display: flex; }
-.add-todo-input { flex-grow: 1; border: none; font-size: 1.1rem; padding: 0.5rem; border-radius: 5px; }
-.add-btn { border: none; margin-left: 5px; color: var(--main); background: var(--blue); padding: 0 0.5rem; border-radius: 5px; cursor: pointer; font-size: 0.9rem; }
+.add-todo-form { border: 2px solid red; width: 90%; margin: 0 auto; }
+.add-todo-group { border: 2px solid blue; width: 100%; display: flex; }
+.add-todo-input { border: 2px solid green; width: 100%; font-size: 1.1rem; padding: 0.5rem; border-radius: 5px; }
+.add-btn { border: 2px solid yellow; margin-left: 5px; color: var(--main); background: var(--blue); padding: 0 0.5rem; border-radius: 5px; cursor: pointer; font-size: 0.9rem; }
 .add-btn:hover { color: var(--blue); background-color: var(--main); }
 .add-btn:active { transform: translate(2px, 2px); }

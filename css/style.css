@@ -63,9 +63,9 @@ body { font-family: Arial, Helvetica, sans-serif; }
 .filtered { display: none; }
 
 /* add todo */
-.add-todo-form { border: 2px solid red; width: 90%; margin: 0 auto; }
-.add-todo-group { border: 2px solid blue; width: 100%; display: flex; }
-.add-todo-input { border: 2px solid green; width: 100%; font-size: 1.1rem; padding: 0.5rem; border-radius: 5px; }
-.add-btn { border: 2px solid yellow; margin-left: 5px; color: var(--main); background: var(--blue); padding: 0 0.5rem; border-radius: 5px; cursor: pointer; font-size: 0.9rem; }
+.add-todo-form { width: 90%; margin: 0 auto; }
+.add-todo-group { width: 100%; display: flex; }
+.add-todo-input { border: none; width: 100%; font-size: 1.1rem; padding: 0.5rem; border-radius: 5px; }
+.add-btn { border: none; margin-left: 5px; color: var(--main); background: var(--blue); padding: 0 0.5rem; border-radius: 5px; cursor: pointer; font-size: 0.9rem; }
 .add-btn:hover { color: var(--blue); background-color: var(--main); }
 .add-btn:active { transform: translate(2px, 2px); }

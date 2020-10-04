@@ -63,8 +63,8 @@ body { font-family: Arial, Helvetica, sans-serif; }
 .filtered { display: none; }
 
 /* add todo */
-.add-todo-form {width: 90%; margin: 0 auto; }
-.add-todo-group { display: flex; }
+.add-todo-form { width: 90%; margin: 0 auto; }
+.add-todo-group { width: 100%; display: flex; }
 .add-todo-input { flex-grow: 1; border: none; font-size: 1.1rem; padding: 0.5rem; border-radius: 5px; }
 .add-btn { border: none; margin-left: 5px; color: var(--main); background: var(--blue); padding: 0 0.5rem; border-radius: 5px; cursor: pointer; font-size: 0.9rem; }
 .add-btn:hover { color: var(--blue); background-color: var(--main); }

@@ -1,8 +1,9 @@
 # pj__web-app__2-todo-app
 ## Info
-- **App**: Todo app
-- **Page link**: https://jayxwoo.github.io/pj__web-app__2-todo-app/
-- **More about this project**: https://www.notion.so/2-Todo-app-no-database-ba2a337e936e42b28b480a79344258dd
+- **Title**: Todo app
+- **Author**: JM Woo
+- **Link**: https://jayxwoo.github.io/pj__web-app__2-todo-app/
+- **Log**: https://www.notion.so/2-Todo-app-no-database-ba2a337e936e42b28b480a79344258dd
 
 ## Features
 - Add todo
